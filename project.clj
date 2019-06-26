@@ -1,4 +1,4 @@
-(defproject com.temify/pdf-utils "0.0.4"
+(defproject com.temify/pdf-utils "0.0.3"
   :description "Library for easier filling of PDF forms across all Biziapp instances"
   :url "https://wwww.bizziapp.com"
 
