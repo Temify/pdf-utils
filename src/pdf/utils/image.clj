@@ -2,6 +2,7 @@
   (:import (org.apache.pdfbox.pdmodel PDDocument
                                       PDPage
                                       PDPageContentStream)
+           (java.io File)
            (org.apache.pdfbox.pdmodel.common PDRectangle)
            (org.apache.pdfbox.pdmodel.graphics.image PDImageXObject)))
 
@@ -32,7 +33,7 @@
 
 (defn merge-images-from-path
   "Merges images provided as a vector of string paths"
-  [images output-doc]
+  [images ^File output-doc]
   (with-open [doc (PDDocument.)]
     (run! #(add-image-to-page doc (PDImageXObject/createFromFile % doc))
           images)
